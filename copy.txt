@@ -1,0 +1,31 @@
+              <p className="infoText">Change the chatGPT to Model to use</p>
+              <p className="infoText">
+                Messages are stored in firebase's firestore
+              </p>
+              <p className="infoText">
+                Hot toast notification when ChatGPT is thinking!
+              </p>
+
+
+
+
+               <p className="infoText">
+                May occassionaly generate incorrect information.
+              </p>
+              <p className="infoText">
+                May occassionaly produce harmful instructions or biased content.
+              </p>
+              <p className="infoText">
+                Limited knowledge of world and events after 2021
+              </p>
+
+
+
+
+              Web client ID
+212277301828-u35o96vvten9ol4jpktbbvll7tisoctg.apps.googleusercontent.com
+
+
+
+Web client secret
+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
