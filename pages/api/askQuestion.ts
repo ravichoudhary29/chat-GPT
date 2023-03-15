@@ -19,7 +19,7 @@ export default async function handler(
     return;
   }
   if (!chatId) {
-    res.status(400).json({ answer: "Please provide a valid chatId!" });
+    res.status(400).json({ answer: "Please provide a valid chat ID!" });
     return;
   }
   // chatGPT query
