@@ -5,6 +5,7 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../firebase";
 import NewChat from "./NewChat";
 import ChatRow from "./ChatRow";
+import ModelSelection from "./ModelSelection";
 
 function SideBar() {
   const { data: session } = useSession();
@@ -24,12 +25,23 @@ function SideBar() {
         <div>
           {/* New Chat */}
           <NewChat />
-          <div>{/* Model Selection */}</div>
+          <div className="hidden sm:inline">
+            <h4 color=" text-slate-600/50">Model selection has been disabled becuase of high pricec of GPT 3.5 and GPT 4!</h4>
+            <ModelSelection />
+          </div>
+          <div className="flex flex-col space-y-2 my-2">
+            {loading &&(
+              <div className="animate-pulse text-center text-white">
+                <p>Loading chats...</p>
+              </div>
+            )}
 
-          {/* Map through the ChatRows */}
           {chats?.docs.map((chat) => (
             <ChatRow key={chat.id} id={chat.id} />
           ))}
+
+          </div>
+
         </div>
       </div>
       {session && (
